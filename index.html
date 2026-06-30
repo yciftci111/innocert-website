@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>InnoCert — ZZP-netwerk voor kwaliteitscontrole, certificering & audit</title>
 <meta name="description" content="InnoCert koppelt opdrachtgevers aan zelfstandige specialisten in kwaliteitscontrole, certificering en audit, en geeft freelance auditors toegang tot opdrachten.">
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiAgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9ImxvZ29UaXRsZS1mYXYiPgogIDx0aXRsZSBpZD0ibG9nb1RpdGxlLWZhdiI+SW5ub0NlcnQ8L3RpdGxlPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwRjJBNDciIHN0cm9rZS13aWR0aD0iMS4yNSIgc3Ryb2tlLWRhc2hhcnJheT0iMS41IDQuNSIgb3BhY2l0eT0iMC4yNSIvPgogIDxwYXRoIGQ9Ik05NC40IDg0LjEgQTQyIDQyIDAgMSAxIDk0LjQgMzUuOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMEYyQTQ3IiBzdHJva2Utd2lkdGg9IjE2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNNDIgNjQgTDU2IDc4IEwxMTQgMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFGN0E1MiIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPg==">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCIgIHJvbGU9ImltZyIgYXJpYS1sYWJlbGxlZGJ5PSJsb2dvVGl0bGUtZmF2Ij4KICA8dGl0bGUgaWQ9ImxvZ29UaXRsZS1mYXYiPklubm9DZXJ0PC90aXRsZT4KICA8cG9seWdvbiBwb2ludHM9IjAsMCA0NCwzMCAwLDMwIiBmaWxsPSIjMEYyQTQ3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIwLDMwIDQ0LDMwIDAsNjAiIGZpbGw9IiMyRDVGOEEiLz4KPC9zdmc+">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -164,10 +164,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-actions{ display:flex; gap:1em; margin-top: 1.8em; flex-wrap:wrap; }
 
 .stamp-figure{ position:relative; display:flex; align-items:center; justify-content:center; }
-.stamp-figure svg{ width: 100%; max-width: 320px; animation: stampIn .6s cubic-bezier(.2,.8,.3,1) both; transform: rotate(-7deg); }
-@keyframes stampIn{
-  0%{ opacity:0; transform: rotate(-7deg) scale(1.4); }
-  100%{ opacity:1; transform: rotate(-7deg) scale(1); }
+.stamp-figure svg{ width: 100%; max-width: 230px; animation: arrowIn .55s cubic-bezier(.2,.8,.3,1) both; }
+@keyframes arrowIn{
+  0%{ opacity:0; transform: translateX(-24px); }
+  100%{ opacity:1; transform: translateX(0); }
 }
 .corner{
   position:absolute; width:18px; height:18px; border-color: var(--steel); opacity:.55;
@@ -376,6 +376,29 @@ input:focus, select:focus, textarea:focus{ border-color: var(--steel); }
   .hero-figure{ order:-1; }
 }
 
+
+/* FAQ accordion */
+.faq-item{ border-bottom:1px solid var(--mist-dark); padding:1.2em 0; }
+.faq-item summary{ cursor:pointer; font-family:var(--font-display); font-weight:600; font-size:1.05rem; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:1em; }
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary .q-mark{ font-family:var(--font-mono); font-size:1.2rem; color:var(--steel); flex-shrink:0; transition: transform .2s ease; }
+.faq-item[open] summary .q-mark{ transform: rotate(45deg); }
+.faq-item p{ margin-top:.8em; max-width:62ch; }
+
+/* Open opdrachten cards */
+.opdracht-card{ border:1px solid var(--mist-dark); background:var(--paper); padding:1.6em 1.7em; }
+.opdracht-meta{ display:flex; flex-wrap:wrap; gap:.5em 1em; font-family:var(--font-mono); font-size:.74rem; color:var(--steel); text-transform:uppercase; letter-spacing:.04em; margin:.6em 0 1em; }
+.opdracht-note{ background:var(--mist); border:1px solid var(--mist-dark); padding:1.2em 1.4em; font-size:.92rem; color:var(--slate); margin-bottom:2em; }
+
+/* Entrance animation — pure CSS, runs unconditionally on load, content is never hidden if anything fails */
+.hero, .page-header{ animation: fadeUp .5s ease both; }
+@keyframes fadeUp{
+  0%{ opacity:0; transform: translateY(14px); }
+  100%{ opacity:1; transform:none; }
+}
+@media (prefers-reduced-motion: reduce){
+  .hero, .page-header{ animation:none; }
+}
 </style>
 </head>
 <body>
@@ -383,11 +406,10 @@ input:focus, select:focus, textarea:focus{ border-color: var(--steel); }
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="brand">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="logoTitle-indexhtml-11">
-  <title id="logoTitle-indexhtml-11">InnoCert</title>
-  <circle cx="60" cy="60" r="54" fill="none" stroke="#0F2A47" stroke-width="1.25" stroke-dasharray="1.5 4.5" opacity="0.25"/>
-  <path d="M94.4 84.1 A42 42 0 1 1 94.4 35.9" fill="none" stroke="#0F2A47" stroke-width="16" stroke-linecap="round"/>
-  <path d="M42 64 L56 78 L114 30" fill="none" stroke="#1F7A52" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 60" width="120" height="120" role="img" aria-labelledby="logoTitle-indexhtml-2011">
+  <title id="logoTitle-indexhtml-2011">InnoCert</title>
+  <polygon points="0,0 44,30 0,30" fill="#0F2A47"/>
+  <polygon points="0,30 44,30 0,60" fill="#2D5F8A"/>
 </svg>
 
       <span class="brand-name">InnoCert<span>Certificering &amp; Audit</span></span>
@@ -426,11 +448,10 @@ input:focus, select:focus, textarea:focus{ border-color: var(--steel); }
       <div class="hero-figure">
         <div class="stamp-figure">
           <div class="corner tl"></div>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="320" height="320" role="img" aria-labelledby="logoTitle-indexhtml-1001">
-  <title id="logoTitle-indexhtml-1001">InnoCert</title>
-  <circle cx="60" cy="60" r="54" fill="none" stroke="#0F2A47" stroke-width="1.25" stroke-dasharray="1.5 4.5" opacity="0.25"/>
-  <path d="M94.4 84.1 A42 42 0 1 1 94.4 35.9" fill="none" stroke="#0F2A47" stroke-width="16" stroke-linecap="round"/>
-  <path d="M42 64 L56 78 L114 30" fill="none" stroke="#1F7A52" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 60" width="320" height="320" role="img" aria-labelledby="logoTitle-indexhtml-2012">
+  <title id="logoTitle-indexhtml-2012">InnoCert</title>
+  <polygon points="0,0 44,30 0,30" fill="#0F2A47"/>
+  <polygon points="0,30 44,30 0,60" fill="#2D5F8A"/>
 </svg>
 
           <div class="corner br"></div>
@@ -445,6 +466,25 @@ input:focus, select:focus, textarea:focus{ border-color: var(--steel); }
       <span>ISO 9001</span><span>ISO 14001</span><span>ISO 55000</span><span>NEN 2767</span><span>ISO 3834</span><span>NEN 1090</span><span>BRL 0512</span><span>BRL 0503</span>
     </div>
   </div>
+
+  <section>
+    <div class="wrap">
+      <div class="stat-strip">
+        <div class="stat">
+          <b>2014</b>
+          <span>Actief sinds</span>
+        </div>
+        <div class="stat">
+          <b>8</b>
+          <span>Vakgebieden in huis</span>
+        </div>
+        <div class="stat">
+          <b>NL</b>
+          <span>Heel Nederland inzetbaar</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">
@@ -567,11 +607,10 @@ input:focus, select:focus, textarea:focus{ border-color: var(--steel); }
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="logoTitle-indexhtml-12">
-  <title id="logoTitle-indexhtml-12">InnoCert</title>
-  <circle cx="60" cy="60" r="54" fill="none" stroke="#FAFBFC" stroke-width="1.25" stroke-dasharray="1.5 4.5" opacity="0.3"/>
-  <path d="M94.4 84.1 A42 42 0 1 1 94.4 35.9" fill="none" stroke="#FAFBFC" stroke-width="16" stroke-linecap="round"/>
-  <path d="M42 64 L56 78 L114 30" fill="none" stroke="#7DD8AE" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 60" width="120" height="120" role="img" aria-labelledby="logoTitle-indexhtml-2013">
+  <title id="logoTitle-indexhtml-2013">InnoCert</title>
+  <polygon points="0,0 44,30 0,30" fill="#FAFBFC"/>
+  <polygon points="0,30 44,30 0,60" fill="#7DA3C4"/>
 </svg>
 
           <strong>InnoCert</strong>
