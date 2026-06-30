@@ -1,233 +1,101 @@
-<!doctype html>
-<html lang="nl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>InnoCert — ZZP-netwerk voor kwaliteitscontrole, certificering & audit</title>
-<meta name="description" content="InnoCert koppelt opdrachtgevers aan zelfstandige specialisten in kwaliteitscontrole, certificering en audit, en geeft freelance auditors toegang tot opdrachten.">
-<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+# InnoCert — website
 
-<header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="brand">
-      <img src="assets/logo.svg" alt="InnoCert logo">
-      <span class="brand-name">InnoCert<span>Certificering &amp; Audit</span></span>
-    </a>
-    <nav class="nav-main" id="nav-main">
-      <a href="index.html" class="active">Home</a>
-      <a href="expertise.html">Expertise</a>
-      <a href="opdrachtgevers.html">Voor opdrachtgevers</a>
-      <a href="freelancers.html">Voor freelancers</a>
-      <a href="over-ons.html">Over ons</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="contact.html" class="btn btn-primary">Aanvragen <span class="btn-arrow">→</span></a>
-    </div>
-    <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+Statische website voor InnoCert, klaar om via GitHub te beheren en met GitHub Pages te publiceren.
 
-<main>
+**Elk `.html`-bestand is volledig zelfstandig**: stijl (CSS), interactiviteit (JS) en het logo zitten er allemaal in verwerkt. Er zijn geen aparte mappen (`css/`, `js/`, `assets/`) meer nodig — dat loste eerdere upload-problemen op waarbij die mappen niet meekwamen. Je kunt nu gewoon de 8 losse `.html`-bestanden uploaden en de site werkt direct.
 
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow">ZZP-netwerk · Kwaliteitscontrole, certificering &amp; audit</p>
-        <h1>Specialistische auditcapaciteit, direct inzetbaar.</h1>
-        <p class="lede">InnoCert koppelt opdrachtgevers aan zelfstandige specialisten in kwaliteitscontrole, certificering en audit — en geeft freelance auditors toegang tot opdrachten, zonder dat zij zelf aan acquisitie hoeven te doen.</p>
-        <div class="hero-actions">
-          <a href="opdrachtgevers.html" class="btn btn-primary">Ik zoek een specialist <span class="btn-arrow">→</span></a>
-          <a href="freelancers.html" class="btn btn-ghost">Ik ben freelance auditor</a>
-        </div>
-      </div>
-      <div class="hero-figure">
-        <div class="stamp-figure">
-          <div class="corner tl"></div>
-          <img src="assets/logo.svg" alt="InnoCert keurmerk" width="320" height="320">
-          <div class="corner br"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+## Structuur
 
-  <div class="code-strip" aria-hidden="true">
-    <div class="code-strip-track">
-      <span>ISO 9001</span><span>ISO 14001</span><span>ISO 55000</span><span>NEN 2767</span><span>ISO 3834</span><span>NEN 1090</span><span>BRL 0512</span><span>BRL 0503</span>
-      <span>ISO 9001</span><span>ISO 14001</span><span>ISO 55000</span><span>NEN 2767</span><span>ISO 3834</span><span>NEN 1090</span><span>BRL 0512</span><span>BRL 0503</span>
-    </div>
-  </div>
+```
+index.html                  Homepage — tweezijdige propositie (opdrachtgevers + freelancers)
+expertise.html              Vakgebied/expertise-overzicht
+opdrachtgevers.html         Voor bedrijven/CI's die een specialist zoeken
+freelancers.html            Voor freelance auditors — incl. aanmeldformulier (#aanmelden)
+over-ons.html                Over InnoCert
+contact.html                 Algemeen contactformulier
+blog.html                    Blog-overzicht
+blog-artikel-voorbeeld.html Sjabloon voor een los blogartikel — kopieer dit bestand voor elk nieuw artikel
+```
 
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Twee kanten, één netwerk</p>
-          <h2>Voor wie werkt InnoCert?</h2>
-        </div>
-      </div>
-      <div class="value-list" style="grid-template-columns: 1fr 1fr; gap: 2em;">
-        <div style="border:1px solid var(--mist-dark); padding:2em;">
-          <span class="cert-code">Opdrachtgevers</span>
-          <h3>Snel de juiste specialist</h3>
-          <p>Certificerende instellingen en bedrijven die tijdelijk capaciteit nodig hebben op het gebied van kwaliteitscontrole, certificering of audit — zonder zelf te hoeven werven.</p>
-          <ul>
-            <li>Direct toegang tot gekwalificeerde zelfstandige specialisten</li>
-            <li>Flexibel inzetbaar, op project- of opdrachtbasis</li>
-            <li>Eén aanspreekpunt voor de match</li>
-          </ul>
-          <a href="opdrachtgevers.html" class="btn btn-ghost">Lees meer voor opdrachtgevers →</a>
-        </div>
-        <div style="border:1px solid var(--mist-dark); padding:2em;">
-          <span class="cert-code">Freelance specialisten</span>
-          <h3>Opdrachten zonder acquisitie</h3>
-          <p>Zelfstandige auditors en inspecteurs die zich aansluiten bij het netwerk van InnoCert en via ons in contact komen met opdrachtgevers die passen bij hun expertise.</p>
-          <ul>
-            <li>Opdrachten passend bij jouw specialisatie</li>
-            <li>Zelf bepalen welke opdrachten je aanneemt</li>
-            <li>Eén keer aanmelden, geregeld voor herhaalde matches</li>
-          </ul>
-          <a href="freelancers.html" class="btn btn-ghost">Meld je aan als freelancer →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+Dat is alles — 8 bestanden, geen submappen.
 
-  <section class="section-alt">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Expertisegebied</p>
-          <h2>Acht normen, breed inzetbaar</h2>
-        </div>
-        <a href="expertise.html" class="btn btn-ghost">Volledig overzicht <span class="btn-arrow">→</span></a>
-      </div>
-      <div class="cert-grid">
-        <a class="cert-card" href="expertise.html#iso9001"><div class="corner tl"></div><span class="cert-code">ISO 9001</span><h3>Kwaliteitsmanagement</h3><span class="go">Meer info →</span></a>
-        <a class="cert-card" href="expertise.html#iso14001"><div class="corner tl"></div><span class="cert-code">ISO 14001</span><h3>Milieumanagement</h3><span class="go">Meer info →</span></a>
-        <a class="cert-card" href="expertise.html#iso55000"><div class="corner tl"></div><span class="cert-code">ISO 55000</span><h3>Assetmanagement</h3><span class="go">Meer info →</span></a>
-        <a class="cert-card" href="expertise.html#nen2767"><div class="corner tl"></div><span class="cert-code">NEN 2767</span><h3>Conditiemeting vastgoed</h3><span class="go">Meer info →</span></a>
-        <a class="cert-card" href="expertise.html#iso3834"><div class="corner tl"></div><span class="cert-code">ISO 3834</span><h3>Kwaliteitseisen lasprocessen</h3><span class="go">Meer info →</span></a>
-        <a class="cert-card" href="expertise.html#nen1090"><div class="corner tl"></div><span class="cert-code">NEN 1090</span><h3>Staal- &amp; aluminiumconstructies</h3><span class="go">Meer info →</span></a>
-        <a class="cert-card" href="expertise.html#brl0512"><div class="corner tl"></div><span class="cert-code">BRL 0512</span><h3>Krachtlasverbindingen</h3><span class="go">Meer info →</span></a>
-        <a class="cert-card" href="expertise.html#brl0503"><div class="corner tl"></div><span class="cert-code">BRL 0503</span><h3>Wapeningsconstructies</h3><span class="go">Meer info →</span></a>
-      </div>
-    </div>
-  </section>
+## 1. Op GitHub zetten (eenvoudig, geen mappen nodig)
 
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Hoe het werkt</p>
-          <h2>Van aanvraag tot match</h2>
-        </div>
-      </div>
-      <div class="process">
-        <div class="process-step">
-          <div class="process-num">01</div>
-          <h3>Aanvraag of aanmelding</h3>
-          <p>Opdrachtgever omschrijft de opdracht, of specialist meldt zich aan met expertise en beschikbaarheid.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-num">02</div>
-          <h3>Match op expertise</h3>
-          <p>InnoCert koppelt de juiste specialist aan de juiste opdracht, op basis van vakgebied en planning.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-num">03</div>
-          <h3>Opdracht &amp; oplevering</h3>
-          <p>De specialist voert de opdracht uit; InnoCert blijft het aanspreekpunt voor beide partijen.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+1. Maak een nieuwe **public** repository aan op GitHub, bijv. `innocert-website`.
+2. Open de repository en klik op **Add file → Upload files**.
+3. Sleep de 8 `.html`-bestanden (gewoon los, uit de uitgepakte zip) het uploadvak in — of klik op "choose your files" en selecteer ze allemaal tegelijk.
+4. Klik **Commit changes**.
+5. Ga naar **Settings → Pages**.
+6. Bij **Branch**, kies `main` en map `/ (root)` → **Save**.
+7. Na een paar minuten is de site bereikbaar op `https://<jouw-gebruikersnaam>.github.io/<repository-naam>/`.
 
-  <section class="section-alt">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">Over InnoCert</p>
-          <h2>Zelf ZZP, en organisator van een netwerk</h2>
-          <p>InnoCert werkt zelf op ZZP-basis in kwaliteitscontrole, certificering en audit — en brengt daarnaast opdrachtgevers in contact met een netwerk van zelfstandige vakspecialisten. Eén aanspreekpunt, korte lijnen, geen wisselende tussenlagen.</p>
-          <a href="over-ons.html" class="btn btn-ghost">Lees meer over ons <span class="btn-arrow">→</span></a>
-        </div>
-        <div class="figure-frame">
-          <div class="corner tl"></div>
-          <span class="mono" style="color:var(--slate)">Foto / illustratie volgt</span>
-          <div class="corner br"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+Controleer na het uploaden of er in de bestandenlijst van de repo precies 8 `.html`-bestanden staan, zonder extra mappen — dan kan er niets meer ontbreken.
 
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Klaar om aan de slag te gaan?</h2>
-      <p>Of je nu een specialist zoekt, of er zelf één bent — InnoCert brengt jullie samen.</p>
-      <div class="hero-actions" style="justify-content:center;">
-        <a href="opdrachtgevers.html" class="btn btn-primary">Ik zoek een specialist <span class="btn-arrow">→</span></a>
-        <a href="freelancers.html" class="btn btn-ghost">Ik ben freelance auditor</a>
-      </div>
-    </div>
-  </section>
+## 2. Eigen domein koppelen (innocert.nl)
 
-</main>
+Je huidige DNS-zone bij je provider bevat dit:
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <img src="assets/logo.svg" alt="InnoCert logo">
-          <strong>InnoCert</strong>
-        </div>
-        <p style="color:var(--mist); opacity:.8; max-width:32ch;">ZZP-netwerk voor kwaliteitscontrole, certificering en audit.</p>
-      </div>
-      <div>
-        <h4>Navigatie</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="expertise.html">Expertise</a></li>
-          <li><a href="opdrachtgevers.html">Voor opdrachtgevers</a></li>
-          <li><a href="freelancers.html">Voor freelancers</a></li>
-          <li><a href="over-ons.html">Over ons</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Expertise</h4>
-        <ul>
-          <li><a href="expertise.html#iso9001">ISO 9001</a></li>
-          <li><a href="expertise.html#iso14001">ISO 14001</a></li>
-          <li><a href="expertise.html#nen2767">NEN 2767</a></li>
-          <li><a href="expertise.html#nen1090">NEN 1090</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:inno_cert@outlook.com">inno_cert@outlook.com</a></li>
-          <li><a href="tel:+31638013327">+31 6 38 01 33 27</a></li>
-          <li><a href="contact.html">Contactformulier</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 InnoCert. Alle rechten voorbehouden.</span>
-      <span>KVK 77620224</span>
-    </div>
-  </div>
-</footer>
+| Naam | Type | Content | Actie |
+|---|---|---|---|
+| `www` | A | 185.104.28.238 | **Vervangen** door CNAME → `<jouw-gebruikersnaam>.github.io` |
+| `www` | AAAA | 2a06:2ec0:1::ffed | **Verwijderen** (vervalt samen met de A-record hierboven) |
+| `@` | A | 185.104.28.238 | **Vervangen** door 4 A-records (zie hieronder) |
+| `@` | AAAA | 2a06:2ec0:1::ffed | **Vervangen** door 4 AAAA-records (optioneel, zie hieronder) |
+| `ftp` | A / AAAA | 185.104.28.238 / 2a06:2ec0:1::ffed | **Laten staan** — tenzij je geen FTP-toegang tot de oude hosting meer nodig hebt |
+| `mail` | A / AAAA | 185.104.28.238 / 2a06:2ec0:1::ffed | **Niet aanraken** — anders werkt je e-mail niet meer |
+| `@` | NS (3x, ns.zxcs.\*) | — | **Niet aanraken** |
+| `_domainkey`, `_dmarc`, `@` (SPF) | TXT | — | **Niet aanraken** — belangrijk voor e-mailafzending/DKIM/DMARC/SPF |
 
-<script src="js/main.js"></script>
-</body>
-</html>
+### Stap voor stap
+
+1. **Verwijder** de bestaande `www` A-record en `www` AAAA-record.
+2. **Voeg toe**: `www` CNAME → `<jouw-gebruikersnaam>.github.io`.
+3. **Verwijder** de bestaande `@` (kale domein) A-record.
+4. **Voeg toe**: vier `@` A-records:
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+5. *(Optioneel, IPv6)* **Vervang** de bestaande `@` AAAA-record door deze vier:
+   ```
+   2606:50c0:8000::153
+   2606:50c0:8001::153
+   2606:50c0:8002::153
+   2606:50c0:8003::153
+   ```
+6. Laat `ftp`, `mail`, de drie `NS`-records en de drie `TXT`-records ongewijzigd.
+7. In de GitHub-repository: maak een bestand **`CNAME`** (geen extensie, gewoon los uploaden net als de andere bestanden) met als inhoud:
+   ```
+   innocert.nl
+   ```
+8. In **Settings → Pages**: vul bij **Custom domain** `innocert.nl` in en sla op. Zodra GitHub de DNS heeft geverifieerd (kan tot 24-48 uur duren) verschijnt de optie **Enforce HTTPS** — vink die aan.
+9. GitHub zorgt er dan automatisch voor dat `www.innocert.nl` doorverwijst naar `innocert.nl`.
+
+## 3. Formulieren laten werken
+
+Het contactformulier (`contact.html`) en het aanmeldformulier voor freelancers (`freelancers.html`) tonen nu alleen een bevestigingstekst, maar versturen nog niets. Eenvoudigste oplossing: **Formspree** (gratis voor laag volume).
+
+1. Maak een gratis account aan op formspree.io en maak een formulier aan.
+2. Open `contact.html` (en/of `freelancers.html`) en zoek de regel:
+   ```html
+   <form id="contact-form">
+   ```
+   Vervang door:
+   ```html
+   <form id="contact-form" action="https://formspree.io/f/JOUW-ID" method="POST">
+   ```
+3. Zoek in hetzelfde bestand het `<script>`-blok onderaan de pagina en verwijder daar de regel `e.preventDefault();` uit de submit-handler voor dat formulier, zodat de browser het formulier daadwerkelijk naar Formspree stuurt.
+
+Laat het weten als je wilt dat ik dit direct voor je inregel.
+
+## 4. Inhoud aanpassen
+
+- Alle teksten staan direct in de HTML-bestanden — makkelijk te vinden en aan te passen met een teksteditor.
+- Omdat alles zelfstandig is, moet je **stijlwijzigingen** (kleuren, lettertype) in elk bestand los aanpassen, of mij vragen dit centraal voor je te doen en opnieuw te genereren.
+- Nieuwe blogartikelen: kopieer `blog-artikel-voorbeeld.html`, pas titel/tekst aan, en voeg een kaart toe op `blog.html` (en eventueel `index.html`).
+
+## 5. Lokaal bekijken
+
+Geen installatie nodig — dubbelklik een `.html`-bestand om 'm direct in je browser te openen.

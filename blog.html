@@ -1,3 +1,14 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog &amp; Nieuws — InnoCert</title>
+<meta name="description" content="Inzichten en updates van InnoCert over certificering, audits en kwaliteitsnormen.">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9ImxvZ29UaXRsZSI+CiAgPHRpdGxlIGlkPSJsb2dvVGl0bGUiPklubm9DZXJ0IGtldXJtZXJrPC90aXRsZT4KICA8ZGVmcz4KICAgIDxwYXRoIGlkPSJyaW5nVGV4dFBhdGgiIGQ9Ik0gNjAsNjAgbSAtNDYsMCBhIDQ2LDQ2IDAgMSwxIDkyLDAgYSA0Niw0NiAwIDEsMSAtOTIsMCIgLz4KICA8L2RlZnM+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBGMkE0NyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBGMkE0NyIgc3Ryb2tlLXdpZHRoPSIxLjI1IiBzdHJva2UtZGFzaGFycmF5PSIxLjUgNC41Ii8+CiAgPHRleHQgZmlsbD0iIzBGMkE0NyIgZm9udC1mYW1pbHk9IidJQk0gUGxleCBNb25vJywgbW9ub3NwYWNlIiBmb250LXNpemU9IjkuMiIgZm9udC13ZWlnaHQ9IjYwMCIgbGV0dGVyLXNwYWNpbmc9IjMiPgogICAgPHRleHRQYXRoIGhyZWY9IiNyaW5nVGV4dFBhdGgiIHN0YXJ0T2Zmc2V0PSIyJSI+SU5OT0NFUlQgwrcgS1dBTElURUlUIMK3IEFVRElUIMK3IENFUlRJRklDRVJJTkcgwrc8L3RleHRQYXRoPgogIDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSIzNCIgZmlsbD0iIzBGMkE0NyIvPgogIDxwYXRoIGQ9Ik00NCA2MC41IEw1NC41IDcxIEw3NyA0NyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkFGQkZDIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
 /* =========================================================
    InnoCert — design tokens
    ========================================================= */
@@ -115,7 +126,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   height: 76px;
 }
 .brand{ display:flex; align-items:center; gap:.7em; text-decoration:none; color: var(--ink); }
-.brand img{ width: 38px; height: 38px; }
+.brand img, .brand svg{ width: 38px; height: 38px; flex-shrink:0; }
 .brand-name{ font-family: var(--font-display); font-weight:600; font-size:1.05rem; letter-spacing:-.01em; }
 .brand-name span{ display:block; font-family: var(--font-mono); font-size:.62rem; letter-spacing:.14em; color: var(--steel); text-transform:uppercase; font-weight:500; }
 
@@ -318,7 +329,7 @@ input:focus, select:focus, textarea:focus{ border-color: var(--steel); }
 .footer-grid h4{ color: var(--white); font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; font-family: var(--font-mono); font-weight:500; margin-bottom: 1em; }
 .footer-grid ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.7em; font-size:.92rem; }
 .footer-brand{ display:flex; align-items:center; gap:.7em; margin-bottom: 1em; }
-.footer-brand img{ width:34px; filter: invert(1); }
+.footer-brand img, .footer-brand svg{ width:34px; height:34px; flex-shrink:0; filter: invert(1); }
 .footer-bottom{
   border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.6em;
   display:flex; justify-content:space-between; flex-wrap:wrap; gap: 1em;
@@ -364,3 +375,223 @@ input:focus, select:focus, textarea:focus{ border-color: var(--steel); }
   .hero .wrap{ grid-template-columns: 1fr; }
   .hero-figure{ order:-1; }
 }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="logoTitle-bloghtml-1">
+  <title id="logoTitle-bloghtml-1">InnoCert keurmerk</title>
+  <defs>
+    <path id="ringTextPath-bloghtml-1" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" />
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#0F2A47" stroke-width="2"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#0F2A47" stroke-width="1.25" stroke-dasharray="1.5 4.5"/>
+  <text fill="#0F2A47" font-family="'IBM Plex Mono', monospace" font-size="9.2" font-weight="600" letter-spacing="3">
+    <textPath href="#ringTextPath-bloghtml-1" startOffset="2%">INNOCERT · KWALITEIT · AUDIT · CERTIFICERING ·</textPath>
+  </text>
+  <circle cx="60" cy="60" r="34" fill="#0F2A47"/>
+  <path d="M44 60.5 L54.5 71 L77 47" fill="none" stroke="#FAFBFC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      <span class="brand-name">InnoCert<span>Certificering &amp; Audit</span></span>
+    </a>
+    <nav class="nav-main" id="nav-main">
+      <a href="index.html">Home</a>
+      <a href="expertise.html">Expertise</a>
+      <a href="opdrachtgevers.html">Voor opdrachtgevers</a>
+      <a href="freelancers.html">Voor freelancers</a>
+      <a href="over-ons.html">Over ons</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Aanvragen <span class="btn-arrow">→</span></a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-header">
+    <div class="wrap">
+      <p class="eyebrow">Blog &amp; nieuws</p>
+      <h1>Inzichten over kwaliteit, audit &amp; certificering</h1>
+      <p class="lede">Praktische artikelen over normen, audittrajecten en alles wat daarbij komt kijken.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="card-grid">
+        <a class="post-card" href="blog-artikel-voorbeeld.html">
+          <div class="post-thumb"><span class="mono">ISO 9001</span></div>
+          <div class="post-body">
+            <span class="post-date">12 juni 2026</span>
+            <h3>Wat verandert er in de ISO 9001-audit van 2026?</h3>
+            <p>Een overzicht van de belangrijkste aandachtspunten voor je volgende beoordeling.</p>
+            <span class="read-more">Lees verder →</span>
+          </div>
+        </a>
+        <a class="post-card" href="blog-artikel-voorbeeld.html">
+          <div class="post-thumb"><span class="mono">NEN 2767</span></div>
+          <div class="post-body">
+            <span class="post-date">28 mei 2026</span>
+            <h3>Conditiemeting: hoe vaak is verstandig?</h3>
+            <p>De afweging tussen onderhoudskosten en meetfrequentie voor vastgoedbeheerders.</p>
+            <span class="read-more">Lees verder →</span>
+          </div>
+        </a>
+        <a class="post-card" href="blog-artikel-voorbeeld.html">
+          <div class="post-thumb"><span class="mono">ZZP</span></div>
+          <div class="post-body">
+            <span class="post-date">14 mei 2026</span>
+            <h3>Waarom kiezen voor een zelfstandige auditor?</h3>
+            <p>De voordelen van één vast aanspreekpunt tijdens je certificeringstraject.</p>
+            <span class="read-more">Lees verder →</span>
+          </div>
+        </a>
+        <a class="post-card" href="blog-artikel-voorbeeld.html">
+          <div class="post-thumb"><span class="mono">NEN 1090</span></div>
+          <div class="post-body">
+            <span class="post-date">2 april 2026</span>
+            <h3>CE-markering en NEN 1090: de basis op een rij</h3>
+            <p>Wat staalbouwers moeten weten voordat ze aan een certificeringstraject beginnen.</p>
+            <span class="read-more">Lees verder →</span>
+          </div>
+        </a>
+        <a class="post-card" href="blog-artikel-voorbeeld.html">
+          <div class="post-thumb"><span class="mono">ISO 14001</span></div>
+          <div class="post-body">
+            <span class="post-date">19 maart 2026</span>
+            <h3>Milieumanagement: meer dan een vinkje op de lijst</h3>
+            <p>Hoe je ISO 14001 inzet als sturingsinstrument in plaats van verplichting.</p>
+            <span class="read-more">Lees verder →</span>
+          </div>
+        </a>
+        <a class="post-card" href="blog-artikel-voorbeeld.html">
+          <div class="post-thumb"><span class="mono">ISO 3834</span></div>
+          <div class="post-body">
+            <span class="post-date">5 maart 2026</span>
+            <h3>Laskwaliteit aantonen: waar begin je?</h3>
+            <p>De eerste stappen richting ISO 3834-certificering voor constructiewerkplaatsen.</p>
+            <span class="read-more">Lees verder →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Vraag over een specifiek artikel?</h2>
+      <p>Neem gerust contact op — we denken graag mee over jouw situatie.</p>
+      <a href="contact.html" class="btn btn-primary">Stel je vraag <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="logoTitle-bloghtml-2">
+  <title id="logoTitle-bloghtml-2">InnoCert keurmerk</title>
+  <defs>
+    <path id="ringTextPath-bloghtml-2" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" />
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#0F2A47" stroke-width="2"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#0F2A47" stroke-width="1.25" stroke-dasharray="1.5 4.5"/>
+  <text fill="#0F2A47" font-family="'IBM Plex Mono', monospace" font-size="9.2" font-weight="600" letter-spacing="3">
+    <textPath href="#ringTextPath-bloghtml-2" startOffset="2%">INNOCERT · KWALITEIT · AUDIT · CERTIFICERING ·</textPath>
+  </text>
+  <circle cx="60" cy="60" r="34" fill="#0F2A47"/>
+  <path d="M44 60.5 L54.5 71 L77 47" fill="none" stroke="#FAFBFC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+          <strong>InnoCert</strong>
+        </div>
+        <p style="color:var(--mist); opacity:.8; max-width:32ch;">Onafhankelijke certificering, audit en kwaliteitscontrole op ZZP-netwerk voor kwaliteitscontrole, certificering en audit.</p>
+      </div>
+      <div>
+        <h4>Navigatie</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="opdrachtgevers.html">Voor opdrachtgevers</a></li>
+          <li><a href="freelancers.html">Voor freelancers</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Expertise</h4>
+        <ul>
+          <li><a href="expertise.html#iso9001">ISO 9001</a></li>
+          <li><a href="expertise.html#iso14001">ISO 14001</a></li>
+          <li><a href="expertise.html#nen2767">NEN 2767</a></li>
+          <li><a href="expertise.html#nen1090">NEN 1090</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:inno_cert@outlook.com">inno_cert@outlook.com</a></li>
+          <li><a href="tel:+31638013327">+31 6 38 01 33 27</a></li>
+          <li><a href="contact.html">Contactformulier</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 InnoCert. Alle rechten voorbehouden.</span>
+      <span>KVK 77620224</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// InnoCert — site script
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.nav-main');
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Simple form handlers (no backend yet — replace with real endpoint)
+  ['#contact-form', '#freelancer-form'].forEach(function (selector) {
+    var form = document.querySelector(selector);
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var note = form.querySelector('.form-status');
+        if (note) {
+          note.textContent = 'Bedankt! Dit formulier is nog niet gekoppeld aan een verzendservice — zie de README voor hoe je dit aansluit (bijv. Formspree of een eigen e-mailadres).';
+        }
+      });
+    }
+  });
+});
+
+</script>
+</body>
+</html>
